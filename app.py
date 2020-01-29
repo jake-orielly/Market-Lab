@@ -1,10 +1,8 @@
 from flask import Flask, request
 from flask_cors import CORS
-import yfinance as yf
-from graphing_utilities import compare
 import json
 
-sp500 = yf.Ticker("^GSPC")
+from graphing_utilities import compare
 
 app = Flask(__name__) 
 CORS(app)
