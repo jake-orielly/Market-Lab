@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="main.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<style>
-</style>
-</head>
-<body>
-<button onclick="ping()">Hi</button>
-<img src="sp500.png">
-<script src="main.js"></script>
-</body>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <img src="results.png" id="graph">
+        <p>Add tickers: 
+            <input id="ticker-input">
+            <button onclick="addTicker()">Add</button>
+        </p>
+        <ul id="tickers-list"></ul>
+        <button onclick="graph()">Graph</button>
+        <script src="main.js"></script>
+    </body>
 </html>
