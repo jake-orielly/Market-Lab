@@ -61,3 +61,22 @@ socket.error: [Errno 98] Address already in use
 96.237.116.15 - - [29/Jan/2020 03:00:46] "GET /results.png HTTP/1.1" 404 -
 96.237.116.15 - - [29/Jan/2020 03:00:46] code 404, message File not found
 96.237.116.15 - - [29/Jan/2020 03:00:46] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [31/Jan/2020 04:15:38] "GET / HTTP/1.1" 200 -
+Serving HTTP on 0.0.0.0 port 8000 ...
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 599, in test
+    httpd.serve_forever()
+  File "/usr/lib64/python2.7/SocketServer.py", line 236, in serve_forever
+    poll_interval)
+  File "/usr/lib64/python2.7/SocketServer.py", line 155, in _eintr_retry
+    return func(*args)
+KeyboardInterrupt
+96.237.116.15 - - [31/Jan/2020 04:17:09] "GET /results.png?1580444226909 HTTP/1.1" 200 -
