@@ -10,6 +10,10 @@
             <input id="ticker-input">
             <button onclick="addTicker()">Add</button>
         </p>
+        <form oninput="sliderUpdate()" id="sliderData">
+            <input id="time-slider" type="range" min="0" max="9" value="1">
+            <span id="time-label">1mo</span>
+        </form>
         <ul id="tickers-list"></ul>
         <button onclick="graph()">Graph</button>
         <script src="main.js"></script>
