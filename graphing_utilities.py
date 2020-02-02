@@ -2,26 +2,35 @@ import yfinance as yf
 import matplotlib.pyplot as plt 
 from pandas import DataFrame
 
-from calculation_utilities import add_percent_change
+from calculation_utilities import add_percent_change, add_rsi
 
 colors = ['blue','green','red','cyan','magenta','yellow','black','white']
 
 def compare(stocks,period,interval):
     # Create the plot space upon which to plot the data
-    fig, ax = plt.subplots()
+    fig, ax1 = plt.subplots()
     fig.autofmt_xdate()
     
     tickers = []
     for i in range(len(stocks)):
         tickers.append(yf.Ticker(stocks[i]))
-        data = tickers[-1].history(period=period,interval=interval)
-        add_percent_change(data)
-        ax.plot(data.index.values, data['Change'], '-o', markersize=0.1, color=colors[i % len(colors)])
+        history = tickers[-1].history(period=period,interval=interval)
+        add_percent_change(history)
+        add_rsi(history,14)
+        ax1.plot(history.index.values, history['Change'], linewidth=1, color=colors[i % len(colors)])
 
-    ax.legend(stocks)
+        ax2 = ax1.twinx()
+
+        ax2.set_ylabel('RSI')
+        ax2.plot(history.index.values, history['RSI'], linewidth=1, linestyle=':', color=colors[i+1 % len(colors)])
+
+    # Otherwise the right y-label gets clipped
+    fig.tight_layout()  
+    ax1.legend(stocks)
+    ax2.legend(stocks)
 
     # Set title and labels for axes
-    ax.set(xlabel='Date',
+    ax1.set(xlabel='Date',
     ylabel='Price',
     title='Close Price')
 
