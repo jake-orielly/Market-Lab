@@ -38,5 +38,9 @@ function intervalUpdate(){
 }
 
 function remove(ticker) {
-    console.log($(ticker).data('name'))
+    let name = $(ticker).data('name')
+    let index = tickers.indexOf(name)
+    if (index != -1)
+        tickers.splice(tickers,1)
+    $(ticker).parent().remove();
 }
