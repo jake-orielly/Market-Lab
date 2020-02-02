@@ -22,16 +22,14 @@ def compare(stocks,period,interval):
         ax2 = ax1.twinx()
 
         ax2.set_ylabel('RSI')
-        ax2.plot(history.index.values, history['RSI'], linewidth=1, linestyle=':', color=colors[i+1 % len(colors)])
+        ax2.plot(history.index.values, history['RSI'], linewidth=1, linestyle=':', color=colors[i % len(colors)])
 
     # Otherwise the right y-label gets clipped
     fig.tight_layout()  
     ax1.legend(stocks)
-    ax2.legend(stocks)
 
     # Set title and labels for axes
     ax1.set(xlabel='Date',
-    ylabel='Price',
-    title='Close Price')
+    ylabel='Price')
 
     plt.savefig('results.png')

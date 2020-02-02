@@ -5,21 +5,27 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
-        <img src="results.png" id="graph">
-        <p>Add tickers: 
-            <input id="ticker-input">
-            <button onclick="addTicker()">Add</button>
-        </p>
-        <form oninput="periodUpdate()" id="sliderData">
-            <input id="period-slider" type="range" min="0" max="10" value="2">
-            <span id="period-label">1mo</span>
-        </form>
-        <form oninput="intervalUpdate()" id="sliderData">
-            <input id="interval-slider" type="range" min="0" max="12" value="8">
-            <span id="interval-label">1d</span>
-        </form>
-        <ul id="tickers-list"></ul>
-        <button onclick="graph()">Graph</button>
+        <div id="sidebar-div">
+            <p>Add metric: <input> <button>Add</button></p> 
+            <ul id="metrics-list"></ul>
+            <p>Add tickers: 
+                <input id="ticker-input">
+                <button onclick="addTicker()">Add</button>
+            </p>
+            <form oninput="periodUpdate()" id="sliderData">
+                <input id="period-slider" type="range" min="0" max="10" value="2">
+                <span id="period-label">1mo</span>
+            </form>
+            <form oninput="intervalUpdate()" id="sliderData">
+                <input id="interval-slider" type="range" min="0" max="12" value="8">
+                <span id="interval-label">1d</span>
+            </form>
+            <ul id="tickers-list"></ul>
+            <button onclick="graph()">Graph</button>
+        </div>
+        <div>
+            <img src="results.png" id="graph">
+        </div>
         <script src="main.js"></script>
     </body>
 </html>

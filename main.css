@@ -1,3 +1,25 @@
+/* --- Sidebar --- */
+#sidebar-div ul {
+    list-style-type: none;
+}
+
+#sidebar-div li {
+    margin: 0.5em 0em;
+}
+
+#sidebar-div {
+    float: left;
+    padding: 2em;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    border: 2px solid #0C6991;
+}
+
 .ticker-remove {
     margin-left: 0.25rem;
     cursor: pointer;

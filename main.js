@@ -24,10 +24,11 @@ function graph() {
 }
 
 function addTicker() {
-    $('#tickers-list').append('<li>' + $('#ticker-input').val() + '<span data-name="' + $('#ticker-input').val() + '" onclick="remove(this)" class="ticker-remove">&#10006;</span></li>');
+    $('#tickers-list').append('<li><div class="ticker-item">' + $('#ticker-input').val() + '<span data-name="' + $('#ticker-input').val() + '" onclick="remove(this)" class="ticker-remove">&#10006;</span></div></li>');
     tickers.push($('#ticker-input').val());
     $('#ticker-input').val('')
 }
+
 
 function periodUpdate(){
     $('#period-label').html(periods[$('#period-slider').val()])
