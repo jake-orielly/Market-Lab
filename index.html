@@ -10,9 +10,13 @@
             <input id="ticker-input">
             <button onclick="addTicker()">Add</button>
         </p>
-        <form oninput="sliderUpdate()" id="sliderData">
-            <input id="time-slider" type="range" min="0" max="9" value="1">
-            <span id="time-label">1mo</span>
+        <form oninput="periodUpdate()" id="sliderData">
+            <input id="period-slider" type="range" min="0" max="10" value="2">
+            <span id="period-label">1mo</span>
+        </form>
+        <form oninput="intervalUpdate()" id="sliderData">
+            <input id="interval-slider" type="range" min="0" max="12" value="8">
+            <span id="interval-label">1d</span>
         </form>
         <ul id="tickers-list"></ul>
         <button onclick="graph()">Graph</button>

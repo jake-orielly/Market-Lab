@@ -10,5 +10,5 @@ CORS(app)
 @app.route('/compare', methods=['POST'])
 def compare_stocks():
     data = json.loads(request.data.decode('utf8'))
-    compare(data['stocks'],data['time'])
+    compare(data['stocks'],data['period'],data['interval'])
     return {'message':'Success'}

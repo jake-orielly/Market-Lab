@@ -1,10 +1,12 @@
 let tickers = [];
-let timeRanges = ['5d','1mo','3mo','6mo','1y','2y','5y','10y','ytd','max'];
+let periods = ['1d','5d','1mo','3mo','6mo','1y','2y','5y','10y','ytd','max'];
+let intervals = ['1m','2m','5m','15m','30m','60m','90m','1h','1d','5d','1wk','1mo','3mo'];
 
 function graph() {
     let data = {}
     data.stocks = tickers;
-    data.time = timeRanges[$('#time-slider').val()];
+    data.period = periods[$('#period-slider').val()];
+    data.interval = intervals[$('#interval-slider').val()];
     var settings = {
         'url': 'http://23.254.164.217:5000/compare',
         'method': 'POST',
@@ -22,11 +24,19 @@ function graph() {
 }
 
 function addTicker() {
-    $('#tickers-list').append('<li>' + $('#ticker-input').val() + '</li>');
+    $('#tickers-list').append('<li>' + $('#ticker-input').val() + '<span data-name="' + $('#ticker-input').val() + '" onclick="remove(this)" class="ticker-remove">&#10006;</span></li>');
     tickers.push($('#ticker-input').val());
     $('#ticker-input').val('')
 }
 
-function sliderUpdate(){
-    $('#time-label').html(timeRanges[$('#time-slider').val()])
+function periodUpdate(){
+    $('#period-label').html(periods[$('#period-slider').val()])
+}
+
+function intervalUpdate(){
+    $('#interval-label').html(intervals[$('#interval-slider').val()])
+}
+
+function remove(ticker) {
+    console.log($(ticker).data('name'))
 }
