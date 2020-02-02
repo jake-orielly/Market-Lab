@@ -583,3 +583,6 @@ socket.error: [Errno 98] Address already in use
 96.237.116.15 - - [02/Feb/2020 01:12:22] "GET /results.png HTTP/1.1" 200 -
 96.237.116.15 - - [02/Feb/2020 01:12:22] code 404, message File not found
 96.237.116.15 - - [02/Feb/2020 01:12:22] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [02/Feb/2020 01:13:21] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [02/Feb/2020 01:13:21] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [02/Feb/2020 01:13:21] "GET /main.js HTTP/1.1" 200 -
