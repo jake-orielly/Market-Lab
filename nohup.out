@@ -968,3 +968,383 @@ socket.error: [Errno 98] Address already in use
 96.237.116.15 - - [02/Feb/2020 03:35:09] "GET /results.png HTTP/1.1" 200 -
 96.237.116.15 - - [02/Feb/2020 03:35:09] code 404, message File not found
 96.237.116.15 - - [02/Feb/2020 03:35:09] "GET /favicon.ico HTTP/1.1" 404 -
+89.248.174.146 - - [02/Feb/2020 07:03:31] code 400, message Bad request version ('HTTP')
+89.248.174.146 - - [02/Feb/2020 07:03:31] "GET ../../proc/ HTTP" 400 -
+51.91.212.80 - - [02/Feb/2020 07:49:38] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00u\x01\x00\x00q\x03\x03`c\xday\x83\xe5\xa5!\x875\xd9\xcd\x1c\xb6\xa3\xcb}\x94h!\x06\x83\xdf8\xadv\x08A\xa3#\xe8\xa2\x00\x00\x1a\xc0/\xc0+\xc0\x11\xc0\x07\xc0\x13\xc0')
+51.91.212.80 - - [02/Feb/2020 07:49:38] " u  q`c⁄yÉÂ•!á5ŸÕ∂£À}îh!Éﬂ8≠vA£#Ë¢  ¿/¿+¿¿¿¿	¿¿" 400 -
+222.186.19.221 - - [02/Feb/2020 08:23:06] code 501, message Unsupported method ('CONNECT')
+222.186.19.221 - - [02/Feb/2020 08:23:06] "CONNECT ip.ws.126.net:443 HTTP/1.1" 501 -
+70.183.213.230 - - [02/Feb/2020 08:26:46] "GET / HTTP/1.1" 200 -
+185.156.177.50 - - [02/Feb/2020 09:10:16] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+185.156.177.50 - - [02/Feb/2020 09:10:16] "  /*‡     Cookie: mstshash=Administr" 400 -
+139.162.79.87 - - [02/Feb/2020 10:47:32] "GET / HTTP/1.1" 200 -
+162.243.129.123 - - [02/Feb/2020 14:32:31] "GET / HTTP/1.1" 200 -
+151.81.165.110 - - [02/Feb/2020 15:16:13] "GET / HTTP/1.1" 200 -
+222.186.19.221 - - [03/Feb/2020 05:25:00] code 501, message Unsupported method ('CONNECT')
+222.186.19.221 - - [03/Feb/2020 05:25:00] "CONNECT ip.ws.126.net:443 HTTP/1.1" 501 -
+45.136.108.64 - - [03/Feb/2020 08:57:27] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*\xe0\x00\x00\x00\x00\x00Cookie:')
+45.136.108.64 - - [03/Feb/2020 08:57:27] "  /*‡     Cookie: mstshash=Administr" 400 -
+51.89.173.198 - - [03/Feb/2020 16:16:11] code 400, message Bad request version ('\xc0\x14\xc0')
+51.89.173.198 - - [03/Feb/2020 16:16:11] " u  q˘_çÒÕcRõÀ:˝ù∆ïŸ¥¯:ë’ÕŒ7®  ¿/¿+¿¿¿¿	¿¿" 400 -
+212.83.146.233 - - [03/Feb/2020 19:17:28] "GET / HTTP/1.1" 200 -
+209.17.96.194 - - [03/Feb/2020 20:44:15] "GET / HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [03/Feb/2020 23:21:40] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [03/Feb/2020 23:21:40] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [03/Feb/2020 23:21:40] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [03/Feb/2020 23:21:40] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [03/Feb/2020 23:21:41] code 404, message File not found
+96.237.116.15 - - [03/Feb/2020 23:21:41] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [03/Feb/2020 23:21:47] "GET /results.png?1580772105562 HTTP/1.1" 200 -
+96.237.116.15 - - [03/Feb/2020 23:21:57] "GET /results.png?1580772115064 HTTP/1.1" 200 -
+96.237.116.15 - - [03/Feb/2020 23:26:22] "GET /results.png?1580772379707 HTTP/1.1" 200 -
+96.237.116.15 - - [03/Feb/2020 23:26:27] "GET /results.png?1580772384907 HTTP/1.1" 200 -
+183.82.106.243 - - [03/Feb/2020 23:45:57] "GET / HTTP/1.1" 200 -
+222.186.19.221 - - [04/Feb/2020 02:15:25] code 501, message Unsupported method ('CONNECT')
+222.186.19.221 - - [04/Feb/2020 02:15:25] "CONNECT ip.ws.126.net:443 HTTP/1.1" 501 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:44:51] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:44:52] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:44:52] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:45:14] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:45:14] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:45:14] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:45:14] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:45:14] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:45:14] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:45:14] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:47:22] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:22] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:23] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:23] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:23] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:23] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:23] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:47:23] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:47:27] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:27] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:27] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:27] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:28] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:47:28] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:47:33] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:33] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:33] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:47:33] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:47:37] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:37] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:37] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:37] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:37] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:47:37] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:47:38] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:38] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:38] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:38] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:38] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:47:38] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:47:53] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:53] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:53] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:53] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:47:54] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:47:54] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:48:19] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:48:19] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:48:19] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:48:19] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:48:19] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:48:19] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:50:15] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:16] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:16] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:16] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:16] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:50:16] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:50:17] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:17] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:17] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:17] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:17] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:50:17] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:50:18] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:18] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:18] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:18] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:19] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:50:19] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:50:23] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:23] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:24] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:24] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:24] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:50:24] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:50:56] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:56] "GET /slider.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:56] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:58] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:58] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:58] "GET /slider.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:58] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:58] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:50:58] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:50:58] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:51:04] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:04] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:04] "GET /slider.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:04] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:04] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:04] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:51:04] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:51:44] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:44] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:45] "GET /slider.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:45] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:45] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:51:45] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:51:45] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:52:00] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:00] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:00] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:00] "GET /slider.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:00] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:00] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:52:00] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:52:13] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:13] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:13] "GET /slider.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:13] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:13] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:13] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:52:13] "GET /favicon.ico HTTP/1.1" 404 -
+96.237.116.15 - - [04/Feb/2020 02:52:56] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:56] "GET /slider.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:52:56] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:53:23] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:53:23] "GET /slider.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:53:29] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:53:29] "GET /slider.js HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 220, in <module>
+    test()
+  File "/usr/lib64/python2.7/SimpleHTTPServer.py", line 216, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib64/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib64/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+96.237.116.15 - - [04/Feb/2020 02:54:03] "GET / HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:54:03] "GET /main.css HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:54:03] "GET /main.js HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:54:03] "GET /results.png HTTP/1.1" 200 -
+96.237.116.15 - - [04/Feb/2020 02:54:03] code 404, message File not found
+96.237.116.15 - - [04/Feb/2020 02:54:03] "GET /favicon.ico HTTP/1.1" 404 -

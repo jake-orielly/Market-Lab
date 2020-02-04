@@ -45,3 +45,4 @@ function remove(ticker) {
         tickers.splice(tickers,1)
     $(ticker).parent().remove();
 }
+

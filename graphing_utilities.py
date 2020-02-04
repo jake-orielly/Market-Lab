@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from pandas import DataFrame
 
 from calculation_utilities import add_percent_change, add_rsi
+from filter_df import filter_df
 
 colors = ['blue','green','red','cyan','magenta','yellow','black','white']
 
@@ -33,3 +34,4 @@ def compare(stocks,period,interval):
     ylabel='Price')
 
     plt.savefig('results.png')
+
