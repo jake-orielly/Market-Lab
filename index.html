@@ -12,6 +12,13 @@
                 <input id="ticker-input">
                 <button onclick="addTicker()">Add</button>
             </p>
+            <form id="period-form">
+                <span id="period-start-label">Start Date</span>
+                <input id="period-start" type="date" value="2020-01-01">
+                <br>
+                <span id="period-end-label">End Date</span>
+                <input id="period-end" type="date" value="2020-02-01">
+            </form>
             <form oninput="periodUpdate()" id="sliderData">
                 <input id="period-slider" type="range" min="0" max="10" value="2">
                 <span id="period-label">1mo</span>
