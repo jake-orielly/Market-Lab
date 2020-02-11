@@ -1,14 +1,14 @@
 def filter_df(df,column,comparator,value):
     if comparator == '>':
-        matching = df[column] > comparator
+        matching = df[column] > value
     elif comparator == '>=':
-        matching = df[column] >= comparator
+        matching = df[column] >= value
     elif comparator == '<':
-        matching = df[column] < comparator
+        matching = df[column] < value
     elif comparator == '<=':
-        matching = df[column] <= comparator
+        matching = df[column] <= value
     elif comparator == '==':
-        matching = df[column] == comparator
+        matching = df[column] == value
 
     return df[matching]
 
