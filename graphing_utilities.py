@@ -19,12 +19,15 @@ def compare(stocks,period,interval):
         add_percent_change(history)
         add_rsi(history,14)
         ax1.plot(history.index.values, history['Change'], linewidth=1, color=colors[i % len(colors)])
+        nh = filter_df(history,'RSI','>',80)
+        for i in range(len(nh.index.values)):
+            ax1.axvspan(nh.index.values[i], nh.index.values[i], linewidth=1, color='red', alpha=0.5)
 
         ax2 = ax1.twinx()
 
         ax2.set_ylabel('RSI')
         ax2.plot(history.index.values, history['RSI'], linewidth=1, linestyle=':', color=colors[i % len(colors)])
-
+    #ax1.plot('2020-01-22',10,color="purple")
     # Otherwise the right y-label gets clipped
     fig.tight_layout()  
     ax1.legend(stocks)
