@@ -15,7 +15,15 @@ def get_within_percent(tickerName,date,percent,contractType):
     ticker = yf.Ticker(tickerName)
     option_df = get_option_chain(ticker,date,contractType)
     curr_price = ticker.history('1d')['Close'][0]
+    add_percent(option_df,curr_price)
+    print(option_df)
     max_strike = curr_price + curr_price * percent/100
     min_strike = curr_price - curr_price * percent/100
     matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),['strike','lastPrice']]
     return matching
+
+def add_percent(df,curr_price):
+    percent = []
+    for i in range(len(df)):
+        percent.append((df['strike'][i]/curr_price))
+    df['percentOfCurr'] = percent 
