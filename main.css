@@ -12,6 +12,24 @@ ul {
     font-weight: 600;
 }
 
+.clickable {
+    cursor:pointer;
+    user-select: none;
+}
+
+.header {
+    padding: 0.25em;
+    margin-left: 1em;
+}
+
+.header span {
+    margin-right: 1em;
+}
+
+.chart-div, .options-div {
+    display: inline-block;
+}
+
 /* --- Sidebar --- */
 #sidebar-div ul {
     list-style-type: none;
@@ -41,4 +59,68 @@ ul {
 
 #period-form input {
     margin: 0.5em;
+}
+
+/* --- Options Table --- */
+#options-table {
+    text-align: center;
+}
+
+#options-table th {
+    padding: 0.5em 1.5em;
+}
+
+#options-table tr:nth-child(even) {
+    background: #3b80b355;
+}
+
+#options-table td {
+    padding: 0.25em 0em;
+}
+
+/* --- Loading Ripple --- 
+Credit to: https://loading.io/css/ */
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+.lds-ripple div {
+    position: absolute;
+    border: 8px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+    0% {
+        top: 72px;
+        left: 72px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 148px;
+        height:148px;
+        opacity: 0;
+    }
+}
+
+/* --- Loading Ripple --- */
+
+.lds-ripple .inner-div {
+    background-color: #3b80b3;
+}
+
+.lds-ripple {
+    position: absolute;
+    top: 15%;
+    margin-left: 5%;
 }

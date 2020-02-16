@@ -4,8 +4,13 @@
         <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="utility_functions.js"></script>
     </head>
-    <body>
+    <body onload="pageLoad()">
+        <div class="header">
+            <span onclick="showCharts()" class="clickable">Charts</span>
+            <span onclick="showOptions()" class="clickable">Options</span>
+        </div>
         <div id="sidebar-div">
             <p>Add metric: <input> <button>Add</button></p> 
             <ul id="metrics-list"></ul>
@@ -32,8 +37,15 @@
             <ul id="tickers-list"></ul>
             <button onclick="graph()">Graph</button>
         </div>
-        <div>
+        <div class="chart-div">
             <img src="results.png" id="graph">
+        </div>
+        <div class="options-div">
+            <div class="lds-ripple" id="loading-ripple">
+                <div class="inner-div"></div>
+                <div></div>
+            </div>
+            <table id="options-table" cellspacing="0"></table>
         </div>
         <script src="main.js"></script>
     </body>

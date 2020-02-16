@@ -17,10 +17,9 @@ def get_within_percent(tickerName,date,percent,contractType):
     curr_price = ticker.history('1d')['Close'][0]
     add_percent(option_df,curr_price)
     add_break_even(option_df)
-    print(option_df)
     max_strike = curr_price + curr_price * percent/100
     min_strike = curr_price - curr_price * percent/100
-    matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),['strike','lastPrice']]
+    matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),['strike','lastPrice','breakEven','percentOfCurr']]
     return matching
 
 # Adds percent of current price as column
@@ -35,3 +34,6 @@ def add_break_even(df):
     for i in range(len(df)):
         break_even.append(df['strike'][i] - df['lastPrice'][i])
     df['breakEven'] = break_even 
+
+def get_option_dates(ticker):
+    return ticker.options
