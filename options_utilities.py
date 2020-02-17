@@ -16,10 +16,11 @@ def get_within_percent(tickerName,date,percent,contractType):
     option_df = get_option_chain(ticker,date,contractType)
     curr_price = ticker.history('1d')['Close'][0]
     add_percent(option_df,curr_price)
-    add_break_even(option_df)
+    add_break_even(option_df,contractType)
+    add_break_even_percent_diff(option_df,curr_price)
     max_strike = curr_price + curr_price * percent/100
     min_strike = curr_price - curr_price * percent/100
-    matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),['strike','lastPrice','breakEven','percentOfCurr']]
+    matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),['strike','lastPrice','breakEven','percentOfCurr','breakEvenPercentDiff']]
     return matching
 
 # Adds percent of current price as column
@@ -29,11 +30,21 @@ def add_percent(df,curr_price):
         percent.append((df['strike'][i]/curr_price))
     df['percentOfCurr'] = percent 
 
-def add_break_even(df):
+def add_break_even(df,contractType):
     break_even = []
+    if (contractType == 'put'):
+        price_mod *= -1
+    else:
+        price_mod = 1
     for i in range(len(df)):
-        break_even.append(df['strike'][i] - df['lastPrice'][i])
+        break_even.append(df['strike'][i] + df['lastPrice'][i] * price_mod)
     df['breakEven'] = break_even 
+
+def add_break_even_percent_diff(df,curr_price):
+    percent = []
+    for i in range(len(df)):
+        percent.append((df['breakEven'][i] - curr_price) / curr_price * 100)
+    df['breakEvenPercentDiff'] = percent 
 
 def get_option_dates(ticker):
     return ticker.options

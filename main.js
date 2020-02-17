@@ -95,8 +95,14 @@ function buildOptionsTable(data) {
         $(table + ' tr:last').append('<th>' + col + '</th>')
     $(table).append('<tbody></tbody>')
     for (let row in data[Object.keys(data)[0]]) {
-        $(table + ' tbody').append('<tr id="' + row + '"></tr>')
+        $(table + ' tbody').append('<tr id="' + row + '"></tr>') 
         for (let col in data)
-            $(table + ' tbody tr:last').append('<td>' + roundTo(data[col][row],2) + '</td>')
+            $(table + ' tbody tr:last').append('<td>' + roundTo(data[col][row],2) + colAddons(col)  + '</td>')
     }
+}
+
+function colAddons(col) {
+    if (col == 'breakEvenPercentDiff' || col == 'percentOfCurr')
+        return '%'
+    return '';
 }
