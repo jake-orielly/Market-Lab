@@ -62,7 +62,7 @@ ul {
 }
 
 /* --- Options Table --- */
-#options-table {
+#options-table-div {
     position: absolute;
     top: 1em;
     text-align: center;

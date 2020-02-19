@@ -21,10 +21,11 @@ def get_within_percent(tickerName,date,percent,contractType):
     add_break_even(option_df,contractType)
     add_break_even_percent_diff(option_df,curr_price)
     add_sd_move(option_df,curr_price,date)
+    add_sds_to_break_even(option_df,curr_price)
     max_strike = curr_price + curr_price * percent/100
     min_strike = curr_price - curr_price * percent/100
     matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),[
-        'strike','lastPrice','breakEven','percentOfCurr','breakEvenPercentDiff','impliedVolatility','standardDeviationMove']]
+        'strike','lastPrice','breakEven','percentOfCurr','breakEvenPercentDiff','impliedVolatility','standardDeviationMove','sdToBreakEven']]
     return matching
 
 # Adds percent of current price as column
@@ -57,6 +58,13 @@ def add_sd_move(df,curr_price,expiration):
         val = curr_price * df['impliedVolatility'][i] * sqrt(days_to_expr) / sqrt(365)
         percent.append(val)
     df['standardDeviationMove'] = percent 
+
+def add_sds_to_break_even(df,curr_price):
+    sd_to_break_even = []
+    for i in range(len(df)):
+        val = abs(curr_price - df['breakEven'][i]) / df['standardDeviationMove'][i]
+        sd_to_break_even.append(val)
+    df['sdToBreakEven'] = sd_to_break_even 
 
 def days_from_today(exp_date):
     e_year,e_month,e_day = [int(i) for i in exp_date.split('-')]
