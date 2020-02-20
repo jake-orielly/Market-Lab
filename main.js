@@ -1,7 +1,7 @@
 let tickers = [];
 let periods = ['1d','5d','1mo','3mo','6mo','1y','2y','5y','10y','ytd','max'];
 let intervals = ['1m','2m','5m','15m','30m','60m','90m','1h','1d','5d','1wk','1mo','3mo'];
-let rData;
+
 function graph() {
     let data = {}
     data.stocks = tickers;
@@ -42,12 +42,15 @@ function optionsInfo(ticker) {
       
     $.ajax(settings).done(function (response) {
         buildOptionsTable(JSON.parse(response.data))
+        $('#options-table-div').show();
+        $('#curr-price').html(response['curr_price'])
         $('#loading-ripple').hide();
     });
 }
 
 function pageLoad() {
     $('#loading-ripple').hide();
+    $('#options-table-div').hide();
 }
 
 function addTicker() {
@@ -86,7 +89,6 @@ function remove(ticker) {
 }
 
 function buildOptionsTable(data) {
-    rData = data;
     let table = '#options-table';
     $(table).empty();
     $(table).append('<thead></thead>');
