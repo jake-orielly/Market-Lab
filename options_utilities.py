@@ -13,6 +13,9 @@ def get_option_chain(ticker,date,contractType):
     chain = ticker.option_chain(date)[contractType]
     return chain
 
+def options_metrics():
+    return ['strike','lastPrice','breakEven','percentReturn','percentOfCurr','breakEvenPercentDiff','impliedVolatility','sdMove','sdToBreakEven']
+
 def get_within_percent(tickerName,date,percent,contractType):
     ticker = yf.Ticker(tickerName)
     option_df = get_option_chain(ticker,date,contractType)
@@ -25,8 +28,7 @@ def get_within_percent(tickerName,date,percent,contractType):
     add_sds_to_break_even(option_df,curr_price)
     max_strike = curr_price + curr_price * percent/100
     min_strike = curr_price - curr_price * percent/100
-    matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),[
-        'strike','lastPrice','breakEven','percentReturn','percentOfCurr','breakEvenPercentDiff','impliedVolatility','standardDeviationMove','sdToBreakEven']]
+    matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),options_metrics()]
     return matching
 
 def get_curr_price(tickerName):
@@ -44,7 +46,7 @@ def add_percent(df,curr_price):
 def add_break_even(df,contractType):
     break_even = []
     if (contractType == 'put'):
-        price_mod *= -1
+        price_mod = -1
     else:
         price_mod = 1
     for i in range(len(df)):
@@ -70,12 +72,12 @@ def add_sd_move(df,curr_price,expiration):
     for i in range(len(df)):
         val = curr_price * df['impliedVolatility'][i] * sqrt(days_to_expr) / sqrt(365)
         percent.append(val)
-    df['standardDeviationMove'] = percent 
+    df['sdMove'] = percent 
 
 def add_sds_to_break_even(df,curr_price):
     sd_to_break_even = []
     for i in range(len(df)):
-        val = abs(curr_price - df['breakEven'][i]) / df['standardDeviationMove'][i]
+        val = abs(curr_price - df['breakEven'][i]) / df['sdMove'][i]
         sd_to_break_even.append(val)
     df['sdToBreakEven'] = sd_to_break_even 
 

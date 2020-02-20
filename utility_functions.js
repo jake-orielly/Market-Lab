@@ -13,3 +13,14 @@ function roundTo(num,decimals) {
     }
     return result;
 }
+
+function prettyPrint(given) {
+    if (given == undefined) {
+        console.error('prettyPrint given undefined input')
+        return '';
+    }
+    let arr = given.split('_')
+    for (let i = 0; i < arr.length; i++)
+        arr[i] = arr[i].substr(0,1).toUpperCase() + arr[i].substr(1);
+    return arr.join(' ');
+}

@@ -30,6 +30,10 @@ ul {
     display: inline-block;
 }
 
+.left-margin-small {
+    margin-left: 0.5em;
+}
+
 /* --- Sidebar --- */
 #sidebar-div ul {
     list-style-type: none;

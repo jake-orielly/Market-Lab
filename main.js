@@ -1,6 +1,9 @@
 let tickers = [];
 let periods = ['1d','5d','1mo','3mo','6mo','1y','2y','5y','10y','ytd','max'];
 let intervals = ['1m','2m','5m','15m','30m','60m','90m','1h','1d','5d','1wk','1mo','3mo'];
+let contractType = 1;
+let contractTypeArr = ['put','call']
+let currOptionTicker = '';
 
 function graph() {
     let data = {}
@@ -25,10 +28,11 @@ function graph() {
 
 function optionsInfo(ticker) {
     let data = {}
+    currOptionTicker = ticker;
     data.tickerName = ticker;
     data.date = '2020-02-21';
     data.percent = 5;
-    data.contractType = 'call';
+    data.contractType = contractTypeArr[contractType];
     $('#loading-ripple').show();
     var settings = {
         'url': 'http://23.254.164.217:5000/options_info',
@@ -107,4 +111,10 @@ function colAddons(col) {
     if (col == 'breakEvenPercentDiff' || col == 'percentOfCurr')
         return '%'
     return '';
+}
+
+function contractTypeToggle() {
+    contractType = (contractType + 1) % 2;
+    $('#contract-type').html(prettyPrint(contractTypeArr[contractType]) + 's');
+    optionsInfo(currOptionTicker);
 }
