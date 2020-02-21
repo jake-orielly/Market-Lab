@@ -29,7 +29,7 @@ def get_within_percent(tickerName,date,percent,contractType):
     max_strike = curr_price + curr_price * percent/100
     min_strike = curr_price - curr_price * percent/100
     matching = option_df.loc[(option_df['strike'] >= min_strike) & (option_df['strike'] <= max_strike),options_metrics()]
-    return matching
+    return  matching.sort_values(by='lastPrice', ascending=True)
 
 def get_curr_price(tickerName):
     ticker = yf.Ticker(tickerName)

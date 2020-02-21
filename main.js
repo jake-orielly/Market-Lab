@@ -31,7 +31,7 @@ function optionsInfo(ticker) {
     currOptionTicker = ticker;
     data.tickerName = ticker;
     data.date = '2020-02-21';
-    data.percent = 5;
+    data.percent = 15;
     data.contractType = contractTypeArr[contractType];
     $('#loading-ripple').show();
     var settings = {
@@ -93,6 +93,7 @@ function remove(ticker) {
 }
 
 function buildOptionsTable(data) {
+    console.log(data)
     let table = '#options-table';
     $(table).empty();
     $(table).append('<thead></thead>');

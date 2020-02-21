@@ -2,6 +2,8 @@ from flask import Flask, request
 from flask_cors import CORS
 import json
 
+import numpy as np
+
 from graphing_utilities import compare
 from options_utilities import get_within_percent, get_curr_price
 
@@ -18,5 +20,7 @@ def compare_stocks():
 def options_info():
     data = json.loads(request.data.decode('utf8'))
     matching = get_within_percent(data['tickerName'],data['date'],data['percent'],data['contractType'])
+    matching_list = np.rot90(np.fliplr(matching.to_numpy())).tolist()
+    matching_json = json.dumps(matching_list)
     curr_price = get_curr_price(data['tickerName'])
-    return {'message':'Success','data':matching.to_json(),'curr_price':curr_price}
+    return {'message':'Success','data':matching_json,'curr_price':curr_price,'columns':list(matching.columns)}
