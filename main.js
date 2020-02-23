@@ -30,7 +30,7 @@ function optionsInfo(ticker) {
     let data = {}
     currOptionTicker = ticker;
     data.tickerName = ticker;
-    data.date = '2020-02-21';
+    data.date = '2020-02-28';
     data.percent = 15;
     data.contractType = contractTypeArr[contractType];
     $('#loading-ripple').show();
@@ -45,7 +45,8 @@ function optionsInfo(ticker) {
     }
       
     $.ajax(settings).done(function (response) {
-        buildOptionsTable(JSON.parse(response.data))
+        console.log(response)
+        buildOptionsTable(JSON.parse(response.data),response.columns)
         $('#options-table-div').show();
         $('#curr-price').html(response['curr_price'])
         $('#loading-ripple').hide();
@@ -92,13 +93,13 @@ function remove(ticker) {
     $(ticker).parent().remove();
 }
 
-function buildOptionsTable(data) {
-    console.log(data)
+function buildOptionsTable(data,columns) {
+    console.log(data,columns)
     let table = '#options-table';
     $(table).empty();
     $(table).append('<thead></thead>');
     $(table + ' thead:last').append('<tr></tr>');
-    for (let col in data)
+    for (let col of columns)
         $(table + ' tr:last').append('<th>' + col + '</th>')
     $(table).append('<tbody></tbody>')
     for (let row in data[Object.keys(data)[0]]) {
