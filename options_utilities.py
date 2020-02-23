@@ -88,5 +88,6 @@ def days_from_today(exp_date):
     return (expiration - today).days + 1
     
 
-def get_option_dates(ticker):
+def get_option_dates(tickerName):
+    ticker = yf.Ticker(tickerName)
     return ticker.options

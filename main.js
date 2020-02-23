@@ -53,6 +53,25 @@ function optionsInfo(ticker) {
     });
 }
 
+function optionDates(ticker) {
+    let data = {}
+    data.tickerName = ticker;
+    $('#loading-ripple').show();
+    var settings = {
+        'url': 'http://23.254.164.217:5000/options_dates',
+        'method': 'POST',
+        'headers': {
+            'Content-Type': 'application/json',
+            'Accept': '*/*',
+        },
+        'data': JSON.stringify(data)
+    }
+      
+    $.ajax(settings).done(function (response) {
+        console.log(response)
+    });
+}
+
 function pageLoad() {
     $('#loading-ripple').hide();
     $('#options-table-div').hide();

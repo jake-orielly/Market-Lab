@@ -5,7 +5,7 @@ import json
 import numpy as np
 
 from graphing_utilities import compare
-from options_utilities import get_within_percent, get_curr_price
+from options_utilities import get_within_percent, get_curr_price, get_option_dates
 
 app = Flask(__name__) 
 CORS(app)
@@ -24,3 +24,9 @@ def options_info():
     matching_json = json.dumps(matching_list)
     curr_price = get_curr_price(data['tickerName'])
     return {'message':'Success','data':matching_json,'curr_price':curr_price,'columns':list(matching.columns)}
+
+@app.route('/options_dates',methods=['POST'])
+def options_dates():
+    req_data = request.data.decode('utf8')
+    req_data = json.loads(req_data)
+    return {'dates':get_option_dates(req_data['tickerName'])}
